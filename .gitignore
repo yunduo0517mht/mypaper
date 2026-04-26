@@ -1,18 +1,1 @@
-# Unpacked doc files (可以从 docx 重新生成)
-unpacked/
-unpacked2/
-
-# Python cache
-__pycache__/
-*.pyc
-
-# OS files
-Thumbs.db
-.DS_Store
-
-# IDE
 .vscode/
-.idea/
-
-# CodeBuddy data
-.codebuddy/

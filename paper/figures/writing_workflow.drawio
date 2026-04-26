@@ -1,0 +1,199 @@
+<mxfile host="VSCode" modified="2026-04-18T12:00:00.000Z" agent="AI" version="21.0.0">
+  <diagram name="论文写作流程" id="writing-workflow">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== 标题 ===== -->
+        <mxCell id="title" value="论文写作 &amp; 实验并行工作流（20天计划）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+          <mxGeometry x="327" y="20" width="1000" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 列标题 ===== -->
+        <mxCell id="col_exp" value="🧪 实验线" style="text;html=1;strokeColor=#0066CC;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#0066CC;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="480" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="col_paper" value="✍️ 论文线" style="text;html=1;strokeColor=#007700;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=14;fontStyle=1;fontColor=#007700;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="80" width="480" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 分隔线 ===== -->
+        <mxCell id="divider" value="" style="line;strokeWidth=2;fillColor=none;strokeColor=#999999;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="70" width="10" height="1000" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 实验线节点 ===== -->
+
+        <!-- Day1-2 -->
+        <mxCell id="e1" value="&lt;b&gt;Day 1-2&lt;/b&gt;&lt;br&gt;LIAR 数据预处理&lt;br&gt;&lt;font color='#666666'&gt;清洗 / 分词 / 构建作者节点&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day3-4 -->
+        <mxCell id="e2" value="&lt;b&gt;Day 3-4&lt;/b&gt;&lt;br&gt;LLM 评论生成（先跑 500 条子集）&lt;br&gt;&lt;font color='#666666'&gt;生成 10 条评论 / 新闻，构建评论节点&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day5-6 -->
+        <mxCell id="e3" value="&lt;b&gt;Day 5-6&lt;/b&gt;&lt;br&gt;异构图构建 HG(V, E, R)&lt;br&gt;&lt;font color='#666666'&gt;HeteroData .pt 文件 / 6 种边类型&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="360" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day7-8 -->
+        <mxCell id="e4" value="&lt;b&gt;Day 7-8&lt;/b&gt;&lt;br&gt;LLM 意图提取（I_t + I_s → I_LLM）&lt;br&gt;&lt;font color='#666666'&gt;写作意图 + 传播意图&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="460" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day9-10 -->
+        <mxCell id="e5" value="&lt;b&gt;Day 9-10&lt;/b&gt;&lt;br&gt;元路径 GCN + 门控融合 → I_final&lt;br&gt;&lt;font color='#666666'&gt;5 条元路径 / GATv2 聚合&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="560" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day11-12 -->
+        <mxCell id="e6" value="&lt;b&gt;Day 11-12&lt;/b&gt;&lt;br&gt;全量训练 + 调参&lt;br&gt;&lt;font color='#666666'&gt;LIAR 全集 / 超参搜索&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="660" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day13-14 -->
+        <mxCell id="e7" value="&lt;b&gt;Day 13-14&lt;/b&gt;&lt;br&gt;对比实验 + 消融实验&lt;br&gt;&lt;font color='#666666'&gt;Baseline 对比 / 各模块消融&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="760" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day15 -->
+        <mxCell id="e8" value="&lt;b&gt;Day 15&lt;/b&gt;&lt;br&gt;SHAP 可解释性 + AUC 可视化&lt;br&gt;&lt;font color='#666666'&gt;生成论文图表数据&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="860" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 论文线节点 ===== -->
+
+        <!-- Day1-2 -->
+        <mxCell id="p1" value="&lt;b&gt;Day 1-2&lt;/b&gt;&lt;br&gt;第 3 章 3.1 节：问题定义&lt;br&gt;&lt;font color='#666666'&gt;HG 形式化 / 意图定义 / 检测目标&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="160" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day3-4 -->
+        <mxCell id="p2" value="&lt;b&gt;Day 3-4&lt;/b&gt;&lt;br&gt;第 3 章 3.2 节：LLM 意图提取&lt;br&gt;&lt;font color='#666666'&gt;Prompt 设计 / I_LLM 提取流程&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="260" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day5-6 -->
+        <mxCell id="p3" value="&lt;b&gt;Day 5-6&lt;/b&gt;&lt;br&gt;第 3 章 3.3 节：元路径 + 门控融合&lt;br&gt;&lt;font color='#666666'&gt;5 条元路径 / GCN / I_final 融合机制&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="360" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day7 -->
+        <mxCell id="p4" value="&lt;b&gt;Day 7&lt;/b&gt;&lt;br&gt;第 3 章 3.4 节：异构图聚合 + SHAP&lt;br&gt;&lt;font color='#666666'&gt;多头注意力 / 稀疏正则 / 可解释性&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="460" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day8-9 -->
+        <mxCell id="p5" value="&lt;b&gt;Day 8-9&lt;/b&gt;&lt;br&gt;第 2 章相关工作 + 第 1 章引言&lt;br&gt;&lt;font color='#666666'&gt;虚假信息检测综述 / 研究动机&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="560" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day10-11 -->
+        <mxCell id="p6" value="&lt;b&gt;Day 10-11&lt;/b&gt;&lt;br&gt;整理参考文献 + 等待实验数据&lt;br&gt;&lt;font color='#666666'&gt;BibTeX 整理 / 图表占位&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="660" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day12-14 -->
+        <mxCell id="p7" value="&lt;b&gt;Day 12-14&lt;/b&gt;&lt;br&gt;第 4 章实验（填入真实数据）&lt;br&gt;&lt;font color='#666666'&gt;实验设置 / 对比结果 / 消融分析&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="760" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Day15-16 -->
+        <mxCell id="p8" value="&lt;b&gt;Day 15-16&lt;/b&gt;&lt;br&gt;摘要 + 结论 + 可视化图表&lt;br&gt;&lt;font color='#666666'&gt;框架图 / SHAP 图 / AUC 曲线&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="860" width="400" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 实验线箭头 ===== -->
+        <mxCell id="ae1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e1" target="e2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e2" target="e3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e3" target="e4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e4" target="e5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e5" target="e6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e6" target="e7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ae7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" source="e7" target="e8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 论文线箭头 ===== -->
+        <mxCell id="ap1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p1" target="p2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p2" target="p3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p3" target="p4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap4" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p4" target="p5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap5" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p5" target="p6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap6" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p6" target="p7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ap7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;" edge="1" source="p7" target="p8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 关键交汇箭头（实验数据 → 论文） ===== -->
+        <mxCell id="cross1" value="子集跑通✓" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#FF6600;strokeWidth=2;dashed=1;fontColor=#FF6600;fontStyle=1;fontSize=10;" edge="1" source="e2" target="p2" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="290" />
+              <mxPoint x="1040" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="cross2" value="实验数据就绪✓" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#FF6600;strokeWidth=2;dashed=1;fontColor=#FF6600;fontStyle=1;fontSize=10;" edge="1" source="e7" target="p7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="790" />
+              <mxPoint x="1040" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="cross3" value="可视化数据✓" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#FF6600;strokeWidth=2;dashed=1;fontColor=#FF6600;fontStyle=1;fontSize=10;" edge="1" source="e8" target="p8" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="890" />
+              <mxPoint x="1040" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ===== 最终汇合 ===== -->
+        <mxCell id="final" value="&lt;b&gt;Day 17-20&lt;/b&gt;&lt;br&gt;🎯 全文润色 + 格式检查 + 提交&lt;br&gt;&lt;font color='#666666'&gt;Pandoc 转 Word → 老师审阅 → 定稿&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="477" y="980" width="700" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="af1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;" edge="1" source="e8" target="final" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="af2" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;" edge="1" source="p8" target="final" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
